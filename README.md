@@ -40,7 +40,7 @@ It does **not** implement the full assignment.
 ## What you should edit first
 
 1. Open `docs/index.html` and replace:
-   - `YOUR_GROUP_NAME`
+   - `G5`
    - member names, student IDs, roles, GitHub links
    - repository URL
 2. Open each page under `docs/assignments/` and replace the dataset/problem placeholders.
@@ -69,8 +69,36 @@ python -m http.server 8000 --directory docs
 
 Then open `http://localhost:8000`.
 
+## Render a Jupyter notebook to HTML
+
+---
+
+## Rendering this notebook on GitHub Pages
+
+1. Run this notebook completely in Google Colab.
+2. Save the executed notebook back to `notebooks/text.ipynb`.
+3. From the repository root, run:
+
+```bash
+python -m pip install nbconvert
+jupyter nbconvert notebooks/text.ipynb \
+  --to html \
+  --output text-notebook.html \
+  --output-dir docs/assignments/text
+```
+
+4. Commit both:
+   - `notebooks/text.ipynb`
+   - `docs/assignments/text/text-notebook.html`
+
+The rendered notebook will then be available at:
+
+```text
+https://nguyenvanhau896.github.io/data-analysis-and-visualization/assignments/text/text-notebook.html
+```
+
 ## Notes
 
 - The assignment pages are intentionally placeholders.
-- The HTML uses relative links so it works under `https://<username>.github.io/<repository>/`.
+- The HTML uses relative links so it works under `https://nguyenvanhau896.github.io/data-analysis-and-visualization/`.
 - No framework or build step is required.

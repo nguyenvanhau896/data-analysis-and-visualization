@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Text Data Assignment | YOUR_GROUP_NAME</title>
+  <title>Vietnamese Sentiment Classification | G5</title>
   <link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="../../">YOUR_GROUP_NAME</a>
+      <a class="brand" href="../../">G5</a>
       <nav class="nav-links" aria-label="Assignment navigation">
         <a href="../../#assignments">All assignments</a>
-        <a href="https://github.com/YOUR_GITHUB_OR_ORG/YOUR_REPOSITORY">Repository</a>
+        <a href="https://github.com/nguyenvanhau896/data-analysis-and-visualization">Repository</a>
       </nav>
     </div>
   </header>
@@ -20,9 +20,19 @@
   <main>
     <section class="hero">
       <div class="container">
-        <span class="eyebrow">Text</span>
-        <h1>Text Data Assignment</h1>
-        <p>Placeholder page for the group assignment. Replace the content below after selecting the actual dataset and problem.</p>
+        <span class="eyebrow">Text · Vietnamese NLP</span>
+        <h1>Vietnamese Student Feedback Sentiment Classification</h1>
+        <p>
+          An end-to-end text classification project using the UIT-VSFC corpus,
+          TF-IDF representations, Logistic Regression, and Linear SVM.
+        </p>
+        <div class="actions">
+          <a class="button" href="text-notebook.html">View rendered notebook</a>
+          <a class="button secondary"
+             href="https://github.com/nguyenvanhau896/data-analysis-and-visualization/blob/main/notebooks/text.ipynb">
+             Notebook source
+          </a>
+        </div>
       </div>
     </section>
 
@@ -30,15 +40,23 @@
       <div class="container grid two">
         <article class="card">
           <h2>Problem &amp; dataset</h2>
-          <p><strong>Problem:</strong> TODO — describe the analytical or machine-learning task.</p>
-          <p><strong>Dataset:</strong> TODO — dataset name, source, size, target, and important constraints.</p>
+          <p><strong>Task:</strong> classify Vietnamese student feedback as negative, neutral, or positive.</p>
+          <p><strong>Dataset:</strong> UIT-VSFC (Vietnamese Students' Feedback Corpus).</p>
+          <p><strong>Scale:</strong> more than 16,000 labeled text samples with predefined train, validation, and test splits.</p>
+          <p><strong>License of mirror:</strong> CC BY-NC-SA 4.0.</p>
+          <p>
+            <a href="https://huggingface.co/datasets/ura-hcmut/UIT-VSFC">
+              Open dataset source →
+            </a>
+          </p>
         </article>
 
         <article class="card">
-          <h2>Team</h2>
-          <p><strong>Group:</strong> YOUR_GROUP_NAME</p>
-          <p><strong>Members:</strong> TODO — list names and student IDs.</p>
-          <p><strong>Contribution:</strong> TODO — identify each member's main contribution.</p>
+          <h2>Methods</h2>
+          <p>Unicode normalization and lightweight text cleaning.</p>
+          <p>EDA: class balance, text length, missing values, duplicates, and examples.</p>
+          <p>Models: majority baseline, word TF-IDF + Logistic Regression, and character TF-IDF + Linear SVM.</p>
+          <p>Evaluation: Accuracy, Macro-F1, Weighted-F1, confusion matrix, and error analysis.</p>
         </article>
       </div>
     </section>
@@ -49,17 +67,17 @@
         <div class="grid three">
           <article class="card">
             <h3>Notebook</h3>
-            <p>Replace with the GitHub notebook URL and/or a working Google Colab URL.</p>
-            <a href="../../../notebooks/text.ipynb">Notebook placeholder →</a>
+            <p>Rendered output including code, plots, tables, model comparison, and error analysis.</p>
+            <a href="text-notebook.html">Rendered notebook →</a>
           </article>
           <article class="card">
             <h3>PDF report</h3>
-            <p>Add the final PDF under <code>reports/</code> and update this link.</p>
+            <p>Add the final report under <code>reports/</code> and replace this placeholder.</p>
             <a href="#">Report placeholder →</a>
           </article>
           <article class="card">
             <h3>Presentation video</h3>
-            <p>Replace with a Public or Unlisted YouTube URL.</p>
+            <p>Replace this with the Public or Unlisted YouTube presentation URL.</p>
             <a href="#">Video placeholder →</a>
           </article>
         </div>
@@ -68,14 +86,18 @@
 
     <section class="section">
       <div class="container card">
-        <h2>Planned workflow</h2>
-        <p>Dataset description → preprocessing → exploratory data analysis → model training → evaluation → conclusions and extensions.</p>
+        <h2>Workflow</h2>
+        <p>
+          Dataset validation → EDA → Vietnamese text normalization → baseline →
+          TF-IDF model comparison → validation-based model selection → final test
+          evaluation → confusion matrix → error analysis → interpretation.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© <span data-year></span> YOUR_GROUP_NAME</div>
+    <div class="container">© <span data-year></span> G5</div>
   </footer>
   <script src="../../assets/js/main.js"></script>
 </body>
