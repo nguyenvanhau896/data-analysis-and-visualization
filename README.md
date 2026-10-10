@@ -69,33 +69,18 @@ python -m http.server 8000 --directory docs
 
 Then open `http://localhost:8000`.
 
-## Render a Jupyter notebook to HTML
+## Rendered notebooks on GitHub Pages
 
----
+Every notebook under `notebooks/` has a matching static page in `docs/assignments/`:
 
-## Rendering this notebook on GitHub Pages
+- `tabular.ipynb` → `assignments/tabular/tabular-notebook.html`
+- `text.ipynb` → `assignments/text/text-notebook.html`
+- `optional.ipynb` → `assignments/optional/optional-notebook.html`
 
-1. Run this notebook completely in Google Colab.
-2. Save the executed notebook back to `notebooks/text.ipynb`.
-3. From the repository root, run:
-
-```bash
-python -m pip install nbconvert
-jupyter nbconvert notebooks/text.ipynb \
-  --to html \
-  --output text-notebook.html \
-  --output-dir docs/assignments/text
-```
-
-4. Commit both:
-   - `notebooks/text.ipynb`
-   - `docs/assignments/text/text-notebook.html`
-
-The rendered notebook will then be available at:
-
-```text
-https://nguyenvanhau896.github.io/data-analysis-and-visualization/assignments/text/text-notebook.html
-```
+The GitHub Pages workflow runs `node scripts/render-notebooks.mjs` before deploying.
+Run the same command locally after saving an executed notebook if you want to preview
+the HTML before pushing. Embedded notebook outputs such as charts, tables, and text
+are included in the published page.
 
 ## Notes
 
