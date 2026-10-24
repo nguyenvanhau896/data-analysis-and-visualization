@@ -1,104 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vietnamese Sentiment Classification | G5</title>
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Vietnamese student feedback sentiment classification with TF-IDF and linear models." />
+  <title>Vietnamese Sentiment Classification | G5</title><link rel="stylesheet" href="../../assets/css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="../../">G5</a>
-      <nav class="nav-links" aria-label="Assignment navigation">
-        <a href="../../#assignments">All assignments</a>
-        <a href="https://github.com/nguyenvanhau896/data-analysis-and-visualization">Repository</a>
-      </nav>
-    </div>
-  </header>
-
+  <header class="site-header"><div class="container nav"><a class="brand" href="../../">G5</a><nav class="nav-links" aria-label="Assignment navigation"><a href="../../#assignments">All projects</a><a href="https://github.com/nguyenvanhau896/data-analysis-and-visualization">Repository</a></nav></div></header>
   <main>
-    <section class="hero">
-      <div class="container">
-        <span class="eyebrow">Text · Vietnamese NLP</span>
-        <h1>Vietnamese Student Feedback Sentiment Classification</h1>
-        <p>
-          An end-to-end text classification project using the UIT-VSFC corpus,
-          TF-IDF representations, Logistic Regression, and Linear SVM.
-        </p>
-        <div class="actions">
-          <a class="button" href="text-notebook.html">View rendered notebook</a>
-          <a class="button secondary"
-             href="https://github.com/nguyenvanhau896/data-analysis-and-visualization/blob/main/notebooks/text.ipynb">
-             Notebook source
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid two">
-        <article class="card">
-          <h2>Problem &amp; dataset</h2>
-          <p><strong>Task:</strong> classify Vietnamese student feedback as negative, neutral, or positive.</p>
-          <p><strong>Dataset:</strong> UIT-VSFC (Vietnamese Students' Feedback Corpus).</p>
-          <p><strong>Scale:</strong> more than 16,000 labeled text samples with predefined train, validation, and test splits.</p>
-          <p><strong>License of mirror:</strong> CC BY-NC-SA 4.0.</p>
-          <p>
-            <a href="https://huggingface.co/datasets/ura-hcmut/UIT-VSFC">
-              Open dataset source →
-            </a>
-          </p>
-        </article>
-
-        <article class="card">
-          <h2>Methods</h2>
-          <p>Unicode normalization and lightweight text cleaning.</p>
-          <p>EDA: class balance, text length, missing values, duplicates, and examples.</p>
-          <p>Models: majority baseline, word TF-IDF + Logistic Regression, and character TF-IDF + Linear SVM.</p>
-          <p>Evaluation: Accuracy, Macro-F1, Weighted-F1, confusion matrix, and error analysis.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Submission links</h2>
-        <div class="grid three">
-          <article class="card">
-            <h3>Notebook</h3>
-            <p>Rendered output including code, plots, tables, model comparison, and error analysis.</p>
-            <a href="text-notebook.html">Rendered notebook →</a>
-          </article>
-          <article class="card">
-            <h3>PDF report</h3>
-            <p>Add the final report under <code>reports/</code> and replace this placeholder.</p>
-            <a href="#">Report placeholder →</a>
-          </article>
-          <article class="card">
-            <h3>Presentation video</h3>
-            <p>Replace this with the Public or Unlisted YouTube presentation URL.</p>
-            <a href="#">Video placeholder →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container card">
-        <h2>Workflow</h2>
-        <p>
-          Dataset validation → EDA → Vietnamese text normalization → baseline →
-          TF-IDF model comparison → validation-based model selection → final test
-          evaluation → confusion matrix → error analysis → interpretation.
-        </p>
-      </div>
-    </section>
+    <section class="hero"><div class="container"><span class="eyebrow">Text · Vietnamese NLP</span><h1>Understanding student feedback with sentiment classification</h1><p>An end-to-end text analysis of the UIT-VSFC corpus, from data checks and Vietnamese text normalization to TF-IDF model comparison and error analysis.</p><div class="actions"><a class="button" href="text-notebook.html">Explore rendered notebook</a><a class="button secondary" href="../../../notebooks/text.ipynb">Download notebook source</a></div></div></section>
+    <section class="section"><div class="container grid two">
+      <article class="card"><span class="card-kicker">Question &amp; data</span><h2>Can a model read the sentiment?</h2><p><strong>Task:</strong> classify Vietnamese student feedback as negative, neutral, or positive.</p><p><strong>Dataset:</strong> UIT-VSFC (Vietnamese Students' Feedback Corpus), with predefined train, validation, and test splits.</p><p><strong>Data mirror:</strong> CC BY-NC-SA 4.0 as described by the dataset host.</p><a href="https://huggingface.co/datasets/ura-hcmut/UIT-VSFC" target="_blank" rel="noreferrer">Dataset card &rarr;</a></article>
+      <article class="card"><span class="card-kicker">Approach</span><h2>Compare, then inspect</h2><ul class="clean-list"><li>Validate splits, labels, duplicates, and text lengths.</li><li>Normalize Unicode and clean URLs, email addresses, and whitespace.</li><li>Compare a majority baseline with word and character TF-IDF models.</li><li>Select using validation Macro-F1, then evaluate on the held-out test set.</li><li>Review confusion pairs and influential terms to understand errors.</li></ul></article>
+    </div></section>
+    <section class="section"><div class="container results-panel"><div><span class="card-kicker">Notebook output</span><h2>Tables, plots, model scores, and examples</h2><p>Open the executed notebook to inspect the full workflow and reproducible analysis.</p></div><a class="button" href="text-notebook.html">Read the notebook &rarr;</a></div></section>
+    <section class="section"><div class="container grid two">
+      <article class="card"><h2>Project report</h2><p>No separate PDF report is included in the repository yet. The notebook contains the methods, evaluation tables, visualizations, and interpretation needed to prepare one.</p></article>
+      <article class="card"><h2>Presentation</h2><p>No presentation video link has been provided. For now, use the rendered notebook as the project walkthrough.</p><a href="text-notebook.html">Open project walkthrough &rarr;</a></article>
+    </div></section>
+    <section class="section"><div class="container card"><h2>Workflow</h2><p class="workflow-line">Dataset validation <span>→</span> exploratory analysis <span>→</span> text normalization <span>→</span> TF-IDF models <span>→</span> validation selection <span>→</span> test evaluation <span>→</span> error interpretation</p></div></section>
   </main>
-
-  <footer>
-    <div class="container">© <span data-year></span> G5</div>
-  </footer>
-  <script src="../../assets/js/main.js"></script>
-</body>
-</html>
+  <footer><div class="container"><a href="../../#assignments">&larr; Back to all projects</a><span> · G5 Data Analysis &amp; Visualization</span></div></footer><script src="../../assets/js/main.js"></script>
+</body></html>
